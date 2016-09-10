@@ -82,16 +82,29 @@ public class StringStream {
       }
       return false;
    }
-   public boolean probe(String value) {
+   private boolean _probe(String value, boolean ignoreCase) {
       for(int i = this.idx, j = 0; 
           i < this.values.length && j < value.length(); 
           i++, j++) 
       {
-         if(this.values[i] != value.charAt(j)) {
-            return false;
+         if(ignoreCase) {
+            if(!String.valueOf(value.charAt(j)).equalsIgnoreCase(String.valueOf((char)this.values[i]))) {
+               return false;
+            }
+         }
+         else {
+            if(this.values[i] != value.charAt(j)) {
+               return false;
+            }
          }
       }
       return true;
+   }
+   public boolean probe(String value) {
+      return this._probe(value, false);
+   }
+   public boolean probeIgnoreCase(String value) {
+      return this._probe(value, true);
    }
    
    // ---------------------------------------------------------------
@@ -102,10 +115,23 @@ public class StringStream {
       }
       return this;
    }
-   public StringStream expect(String value) {
+   private StringStream _expect(String value, boolean ignoreCase) {
       for(int i = 0; i < value.length(); i++) {
-         this.expect(value.charAt(i));
+         if(ignoreCase) {
+            int read = this.read();
+            if(!String.valueOf(value.charAt(i)).equalsIgnoreCase(String.valueOf((char)read))) {
+               throw new UnexpectedTokenException(value, String.valueOf((char)read));
+            }
+         } else {
+            this.expect(value.charAt(i));
+         }
       }
       return this;
+   }
+   public StringStream expect(String value) {
+      return this._expect(value, false);
+   }
+   public StringStream expectIgnoreCase(String value) {
+      return this._expect(value, true);
    }
 }

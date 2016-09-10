@@ -1,4 +1,4 @@
-package main.java.kuma.json.core.model;
+package main.java.kuma.json.model;
 
 public class JsonNumber extends JsonValue {
    // ---------------------------------------------------------------

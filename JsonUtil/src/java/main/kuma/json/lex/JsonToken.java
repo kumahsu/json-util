@@ -1,6 +1,6 @@
-package main.java.kuma.json.lex;
+package java.main.kuma.json.lex;
 
-import main.java.kuma.json.exception.UnexpectedTokenException;
+import java.main.kuma.json.exception.UnexpectedTokenException;
 
 public abstract class JsonToken {
    // ---------------------------------------------------------------

@@ -1,11 +1,11 @@
-package main.java.kuma.json.lex;
+package java.main.kuma.json.lex;
 
-public class BooleanToken extends JsonToken {
+public class StringToken extends JsonToken {
    // ---------------------------------------------------------------
-   private boolean value;
+   private String value;
    
    // ---------------------------------------------------------------
-   public BooleanToken(Boolean value) {
+   public StringToken(String value) {
       if(value == null) {
          throw new IllegalArgumentException("value is null");
       }
@@ -13,14 +13,14 @@ public class BooleanToken extends JsonToken {
    }
    
    // ---------------------------------------------------------------
-   public Boolean getValue() {
+   public String getValue() {
       return this.value;
    }
    
    // ---------------------------------------------------------------
    @Override
    public int tokenType() {
-      return JsonToken.BOOLEAN;
+      return JsonToken.STRING;
    }
 
 }

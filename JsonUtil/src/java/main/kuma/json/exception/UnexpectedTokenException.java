@@ -1,4 +1,4 @@
-package main.java.kuma.json.exception;
+package java.main.kuma.json.exception;
 
 public class UnexpectedTokenException extends RuntimeException {
    // ---------------------------------------------------------------

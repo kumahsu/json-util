@@ -1,6 +1,6 @@
-package main.java.kuma.json.common;
+package java.main.kuma.json.common;
 
-import main.java.kuma.json.exception.UnexpectedTokenException;
+import java.main.kuma.json.exception.UnexpectedTokenException;
 
 public class StringStream {
    // ---------------------------------------------------------------

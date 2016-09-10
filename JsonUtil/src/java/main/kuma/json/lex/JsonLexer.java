@@ -1,7 +1,7 @@
-package main.java.kuma.json.lex;
+package java.main.kuma.json.lex;
 
-import main.java.kuma.json.common.StringStream;
-import main.java.kuma.json.exception.UnexpectedTokenException;
+import java.main.kuma.json.common.StringStream;
+import java.main.kuma.json.exception.UnexpectedTokenException;
 
 public class JsonLexer {
    // ---------------------------------------------------------------

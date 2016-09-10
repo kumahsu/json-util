@@ -1,16 +1,18 @@
-package main.java.kuma.json.lex;
+package java.main.kuma.json.lex;
 
-public class NullToken extends JsonToken {
+public class SymToken extends JsonToken {
    // ---------------------------------------------------------------
-   public static final NullToken VALUE = new NullToken();
+   private char sym;
    
    // ---------------------------------------------------------------
-   private NullToken() { }
+   public SymToken(char sym) {
+      this.sym = sym;
+   }
    
    // ---------------------------------------------------------------
    @Override
    public int tokenType() {
-      return JsonToken.NULL;
+      return this.sym;
    }
 
 }

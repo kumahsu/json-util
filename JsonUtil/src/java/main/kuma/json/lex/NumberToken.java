@@ -1,4 +1,4 @@
-package main.java.kuma.json.lex;
+package java.main.kuma.json.lex;
 
 public class NumberToken extends JsonToken {
    // ---------------------------------------------------------------

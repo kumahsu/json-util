@@ -1,11 +1,11 @@
-package main.java.kuma.json.model;
+package java.main.kuma.json.lex;
 
-public class JsonNumber extends JsonValue {
+public class BooleanToken extends JsonToken {
    // ---------------------------------------------------------------
-   private Number value;
+   private boolean value;
    
    // ---------------------------------------------------------------
-   public JsonNumber(Number value) {
+   public BooleanToken(Boolean value) {
       if(value == null) {
          throw new IllegalArgumentException("value is null");
       }
@@ -13,18 +13,14 @@ public class JsonNumber extends JsonValue {
    }
    
    // ---------------------------------------------------------------
-   public Number getValue() {
+   public Boolean getValue() {
       return this.value;
    }
    
    // ---------------------------------------------------------------
    @Override
-   public String toJson() {
-      return String.valueOf(this.value);
+   public int tokenType() {
+      return JsonToken.BOOLEAN;
    }
 
-   @Override
-   public String toPrettyJson(int indent) {
-      return this.toJson();
-   }
 }

@@ -1,4 +1,4 @@
-package main.java.kuma.json.model;
+package java.main.kuma.json.model;
 
 import java.util.Collection;
 import java.util.Iterator;

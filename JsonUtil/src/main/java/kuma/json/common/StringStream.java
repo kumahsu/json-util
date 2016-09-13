@@ -1,6 +1,6 @@
-package java.main.kuma.json.common;
+package main.java.kuma.json.common;
 
-import java.main.kuma.json.exception.UnexpectedTokenException;
+import main.java.kuma.json.exception.UnexpectedTokenException;
 
 public class StringStream {
    // ---------------------------------------------------------------
@@ -32,9 +32,9 @@ public class StringStream {
                match = true;
                break;
             }
-            if(match) {
-               this.idx++;
-            }
+         }
+         if(match) {
+            this.idx++;
          }
       }
       return this;

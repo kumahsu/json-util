@@ -1,21 +1,22 @@
-package java.main.kuma.json.core;
+package main.java.kuma.json.core;
 
-import java.main.kuma.json.exception.UnexpectedTokenException;
-import java.main.kuma.json.lex.BooleanToken;
-import java.main.kuma.json.lex.JsonLexer;
-import java.main.kuma.json.lex.JsonToken;
-import java.main.kuma.json.lex.NumberToken;
-import java.main.kuma.json.lex.StringToken;
-import java.main.kuma.json.model.JsonArray;
-import java.main.kuma.json.model.JsonBoolean;
-import java.main.kuma.json.model.JsonNull;
-import java.main.kuma.json.model.JsonNumber;
-import java.main.kuma.json.model.JsonObject;
-import java.main.kuma.json.model.JsonPair;
-import java.main.kuma.json.model.JsonString;
-import java.main.kuma.json.model.JsonValue;
 import java.util.LinkedList;
 import java.util.List;
+
+import main.java.kuma.json.exception.UnexpectedTokenException;
+import main.java.kuma.json.lex.BooleanToken;
+import main.java.kuma.json.lex.JsonLexer;
+import main.java.kuma.json.lex.JsonToken;
+import main.java.kuma.json.lex.NumberToken;
+import main.java.kuma.json.lex.StringToken;
+import main.java.kuma.json.model.JsonArray;
+import main.java.kuma.json.model.JsonBoolean;
+import main.java.kuma.json.model.JsonNull;
+import main.java.kuma.json.model.JsonNumber;
+import main.java.kuma.json.model.JsonObject;
+import main.java.kuma.json.model.JsonPair;
+import main.java.kuma.json.model.JsonString;
+import main.java.kuma.json.model.JsonValue;
 
 public class JsonParser {
    // ---------------------------------------------------------------
